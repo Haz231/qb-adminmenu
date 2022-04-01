@@ -643,7 +643,7 @@ end)
 
 -- Player List
 
-local function OpenPermsMenu(permsply)
+--[[local function OpenPermsMenu(permsply)
     QBCore.Functions.TriggerCallback('qb-admin:server:getrank', function(rank)
         if rank then
             local selectedgroup = 'Unknown'
@@ -700,7 +700,7 @@ local function OpenPermsMenu(permsply)
             MenuV:CloseMenu(menu)
         end
     end)
-end
+end]]
 
 local function LocalInput(text, number, windows)
     AddTextEntry("FMMC_MPM_NA", text)
@@ -921,12 +921,12 @@ local function OpenPlayerMenus(player)
             value = "ban",
             description = Lang:t("menu.ban") .. " " .. player.cid .. " " .. Lang:t("info.reason")
         },
-        [12] = {
+        --[[[12] = {
             icon = '🎟️',
             label = Lang:t("menu.permissions"),
             value = "perms",
             description = Lang:t("info.give") .. " " .. player.cid .. " " .. Lang:t("menu.permissions")
-        }
+        }]]
     }
     for k, v in ipairs(elements) do
         local menu_button10 = Players:AddButton({
